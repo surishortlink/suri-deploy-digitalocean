@@ -1,8 +1,0 @@
-name: suri
-static_sites:
-  - name: suri
-    build_command: npm run build
-    output_dir: build
-    git:
-      repo_clone_url: https://github.com/staticsuri/suri-deploy-digitalocean.git
-      branch: main

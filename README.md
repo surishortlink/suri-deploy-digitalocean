@@ -10,24 +10,31 @@ repository to learn more, including additional deployment methods.
 
 ## Setup
 
+_**Note:** This is going to seem more complicated than it should be, but it's the
+only way to launch with a pre-configured setup that's also connected to your
+GitHub repository for auto-deployment. If you know of a more straight-forward
+way, please reach out!_
+
 1. Click the "Use this template" button above and then "Create a new
    repository". Fill in the required details to create a new repository based on
-   this one.
-2. On the [DigitalOcean Control Panel](https://cloud.digitalocean.com/),
+   this one. **You must set the visibility to "Public"!**
+2. Change line 8 of [.do/deploy.template.yaml](./.do/deploy.template.yaml),
+   replacing `{{owner}}` and `{{repo}}` in `repo` with the values for your new
+   repository.
+3. On the [DigitalOcean Control Panel](https://cloud.digitalocean.com/), head to
    [create a new app](https://cloud.digitalocean.com/apps/new).
-3. Connect your GitHub account or edit existing permissions to grant access to
-   your new repository. Select that repository and hit "Next".
-4. Edit the component it detected and change the "Resource Type" to "Static
-   Site". Hit "Save". _(Note: It's unclear how to tell DigitalOcean that this is
-   a static site. Neither [./.do/app.yaml](./.do/app.yaml) or
-   [./.do/deploy.template.yaml](./.do/deploy.template.yaml) seem to be utilized.
-   If you know the trick, please reach out!)_
-5. Continue through the remaining sections until you reach "Review". Hit "Create
-   Resources" to begin the build and deploy process.
-6. Any commits to the `main` branch of your new repository will trigger a new
-   deploy. You can change this by going to the "Settings" of your component and
-   editing the "Branch" and "Autodeploy" options.
-7. If you want to use a custom domain, follow DigitalOcean's guide:
+4. Connect your GitHub account or edit existing permissions to grant access to
+   your new repository. **Don't hit "Next" after arriving back at
+   DigitalOcean!**
+5. Open the following URL, again replacing `{{owner}}` and `{{repo}}` with the
+   values for your new repository:
+   [https://cloud.digitalocean.com/apps/new?repo=https://github.com/{{owner}}/{{repo}}/tree/main](https://cloud.digitalocean.com/apps/new?repo=https://github.com/{{owner}}/{{repo}}/tree/main)
+6. Hit "Skip to Review", as everything should already be set appropriately. Then
+   hit "Create Resources" to begin the build and deploy process.
+7. Any commits to the `main` branch of your new repository will trigger a new
+   deploy. You can change this by going to the "Settings" of the `suri`
+   component and editing the "Branch" and "Autodeploy" options.
+8. If you want to use a custom domain, follow DigitalOcean's guide:
    [How to Manage Domains in App Platform](https://docs.digitalocean.com/products/app-platform/how-to/manage-domains/).
 
 ## Manage Links

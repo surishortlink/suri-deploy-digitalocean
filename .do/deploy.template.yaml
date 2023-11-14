@@ -4,6 +4,7 @@ spec:
     - name: suri
       build_command: npm run build
       output_dir: build
-      git:
-        repo_clone_url: https://github.com/staticsuri/suri-deploy-digitalocean.git
+      github:
+        repo: {{owner}}/{{repo}}}
         branch: main
+        deploy_on_push: true
