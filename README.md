@@ -8,13 +8,27 @@ site. No server-side hosting, serverless cloud functions, or database necessary.
 Head over to the main [`jstayton/suri`](https://github.com/jstayton/suri)
 repository to learn more, including additional deployment methods.
 
-## Deploy in One Click (For Free)
+## Setup
 
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/staticsuri/suri-deploy-digitalocean/tree/main)
-
-Once complete, try accessing the root path of your URL – it should redirect back
-to the main [`jstayton/suri`](https://github.com/jstayton/suri) repository if
-everything's working.
+1. Click the "Use this template" button above and then "Create a new
+   repository". Fill in the required details to create a new repository based on
+   this one.
+2. On the [DigitalOcean Control Panel](https://cloud.digitalocean.com/),
+   [create a new app](https://cloud.digitalocean.com/apps/new).
+3. Connect your GitHub account or edit existing permissions to grant access to
+   your new repository. Select that repository and hit "Next".
+4. Edit the component it detected and change the "Resource Type" to "Static
+   Site". Hit "Save". _(Note: It's unclear how to tell DigitalOcean that this is
+   a static site. Neither [./.do/app.yaml](./.do/app.yaml) or
+   [./.do/deploy.template.yaml](./.do/deploy.template.yaml) seem to be utilized.
+   If you know the trick, please reach out!)_
+5. Continue through the remaining sections until you reach "Review". Hit "Create
+   Resources" to begin the build and deploy process.
+6. Any commits to the `main` branch of your new repository will trigger a new
+   deploy. You can change this by going to the "Settings" of your component and
+   editing the "Branch" and "Autodeploy" options.
+7. If you want to use a custom domain, follow DigitalOcean's guide:
+   [How to Manage Domains in App Platform](https://docs.digitalocean.com/products/app-platform/how-to/manage-domains/).
 
 ## Manage Links
 
