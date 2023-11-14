@@ -3,3 +3,6 @@ static_sites:
   - name: suri
     build_command: npm run build
     output_dir: build
+    github:
+      repo: staticsuri/suri-deploy-digitalocean
+      branch: main
