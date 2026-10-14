@@ -8,3 +8,6 @@ spec:
         repo: {{owner}}/{{repo}}
         branch: main
         deploy_on_push: true
+  # Every page is a redirect with its target URL in the HTML, which email
+  # obfuscation could rewrite if the URL contains an email address.
+  disable_email_obfuscation: true
