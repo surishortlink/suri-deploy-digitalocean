@@ -32,8 +32,8 @@ way, please reach out!_
 5. Open the following URL, again replacing `{{owner}}` and `{{repo}}` with the
    values for your new repository:
    [https://cloud.digitalocean.com/apps/new?repo=https://github.com/{{owner}}/{{repo}}/tree/main](https://cloud.digitalocean.com/apps/new?repo=https://github.com/{{owner}}/{{repo}}/tree/main)
-6. Hit "Skip to Review", as everything should already be set appropriately. Then
-   hit "Create Resources" to begin the initial build and deploy.
+6. Everything should already be set appropriately, so hit "Create App" to begin
+   the initial build and deploy.
 
 ### Auto-Deploy
 
