@@ -38,10 +38,12 @@ way, please reach out!_
 ### Auto-Deploy
 
 Any commits to the `main` branch of your new repository will trigger a new build
-and deploy. Pull requests are built by GitHub Actions without deploying, so a
-mistake in `links.json` is caught before it's merged. You can change this by
-going to the "Settings" of the `suri` component and editing the "Branch" and
-"Autodeploy" options.
+and deploy. You can change this by going to the "Settings" of the `suri`
+component and editing the "Branch" and "Autodeploy" options.
+
+Pull requests are built by GitHub Actions without deploying, so a mistake in
+`links.json` is caught before it's merged. You can change this by editing
+[`.github/workflows/build.yml`](.github/workflows/build.yml).
 
 ### Custom Domain
 
